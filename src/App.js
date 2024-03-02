@@ -7,6 +7,7 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import './App.css';
 
+/*Define un componente*/ 
 export const App = () => {
   return(
     <BrowserRouter>
