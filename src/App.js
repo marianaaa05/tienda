@@ -25,7 +25,7 @@ import StackedChart from "./pages/Charts/Stacked";
 import "./App.css";
 
 export const App = () => {
-  const activeMenu = false;
+  const activeMenu = true;
   return (
     <BrowserRouter>
       <div className="flex relative dark:bg-main-dark-bg">
@@ -34,14 +34,7 @@ export const App = () => {
             <button
               type="button"
               className="text-3xl p-3 hover:drop-shadow-x1 hover:bg-light-gray text-white"
-              style={{
-                background: "gray",
-                borderRadius: "50%",
-                position: "fixed",
-                bottom: "20px",
-                right: "20px",
-                zIndex: "1000",
-              }}
+              style={{ background: "gray", borderRadius: "50%" }}
             >
               <FiSettings />
             </button>
@@ -64,22 +57,22 @@ export const App = () => {
           <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full">
             <Navbar></Navbar>
           </div>
-          {/* ----------------------- */}
+
           <div>
             <Routes>
-              {/*dashBoard*/}
+              {/*dashBoard */}
               <Route path="/" element={<Ecommerce />} />
               <Route path="/ecommerce" element={<Ecommerce />} />
               {/* pages*/}
               <Route path="/orders" element={<Orders />} />
               <Route path="/employees" element={<Employees />} />
               <Route path="/customers" element={<Customers />} />
-              {/* Apps */}
+              {/*Apps */}
               <Route path="/kanban" element={<Kanban />} />
               <Route path="/editor" element={<Editor />} />
               <Route path="/calendar" element={<Calendar />} />
               <Route path="/color-picker" element={<ColorPicker />} />
-              {/* Graficos */}
+              {/*Graficos*/}
               <Route path="/line" element={<LineChart />} />
               <Route path="/area" element={<AreaChart />} />
               <Route path="/bar" element={<BarChart />} />
@@ -87,7 +80,7 @@ export const App = () => {
               <Route path="/financial" element={<FinancialChart />} />
               <Route path="/color-mapping" element={<ColorMappingChart />} />
               <Route path="/pyramid" element={<PyramidChart />} />
-              <Route path="/stacked" element={<StackedChart />} />
+              <Route path="/staked" element={<StackedChart />} />
             </Routes>
           </div>
         </div>
