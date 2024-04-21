@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { FiShoppingCart } from 'react-icons/fi'
 import { BsChatLeft } from 'react-icons/bs'
@@ -30,10 +30,26 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
     </button>
   </TooltipComponent>
 )
-
 function Navbar () {
   // eslint-disable-next-line no-unused-vars
-  const { currentColor, activeMenu, setActiveMenu, handleClick, isClicked, setIsClicked, screeSize, setScreenSize } = useStateContext()
+  const { currentColor, activeMenu, setActiveMenu, handleClick, isClicked, 
+    setIsClicked, screenSize, setScreenSize } = useStateContext()
+  
+  useEffect(() => {
+    const handleResize = () => setScreenSize(window.innerWidth)
+    window.addEventListener('resize', handleResize)
+    handleResize()
+
+    return() => window.removeEventListener('resize', handleResize)
+  },[])
+
+  useEffect(() => {
+    if(screenSize <= 750){
+      setActiveMenu(false)
+    } else{
+      setActiveMenu(true)
+    }
+  }, [screenSize])
   return (
     <div className='flex justify-between p-2 md:mx-6 relative'>
       <NavButton
