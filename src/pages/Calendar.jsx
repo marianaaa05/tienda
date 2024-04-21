@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Calendar() {
+function Calendar () {
   return (
     <div>Calendar</div>
   )

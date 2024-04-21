@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Pyramid() {
+function Pyramid () {
   return (
     <div>Pyramid</div>
   )

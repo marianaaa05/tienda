@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ColorPicker() {
+function ColorPicker () {
   return (
     <div>ColorPicker</div>
   )

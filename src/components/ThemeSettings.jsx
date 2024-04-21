@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ThemeSettings() {
+function ThemeSettings () {
   return (
     <div>ThemeSettings</div>
   )

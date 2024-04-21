@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { FiShoppingCart } from 'react-icons/fi'
@@ -32,21 +33,23 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 )
 function Navbar () {
   // eslint-disable-next-line no-unused-vars
-  const { currentColor, activeMenu, setActiveMenu, handleClick, isClicked, 
-    setIsClicked, screenSize, setScreenSize } = useStateContext()
-  
+  const {
+    currentColor, activeMenu, setActiveMenu, handleClick, isClicked,
+    setIsClicked, screenSize, setScreenSize
+  } = useStateContext()
+
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth)
     window.addEventListener('resize', handleResize)
     handleResize()
 
-    return() => window.removeEventListener('resize', handleResize)
-  },[])
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   useEffect(() => {
-    if(screenSize <= 750){
+    if (screenSize <= 750) {
       setActiveMenu(false)
-    } else{
+    } else {
       setActiveMenu(true)
     }
   }, [screenSize])

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Financial() {
+function Financial () {
   return (
     <div>Financial</div>
   )

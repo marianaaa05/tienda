@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Customers() {
+function Customers () {
   return (
     <div>Customers</div>
   )

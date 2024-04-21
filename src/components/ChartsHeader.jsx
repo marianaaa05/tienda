@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ChartsHeader() {
+function ChartsHeader () {
   return (
     <div>ChartsHeader</div>
   )

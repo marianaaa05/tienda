@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Editor() {
+function Editor () {
   return (
     <div>Editor</div>
   )

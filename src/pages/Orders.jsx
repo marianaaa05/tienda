@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Orders() {
+function Orders () {
   return (
     <div>Orders</div>
   )

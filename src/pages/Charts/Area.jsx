@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Area() {
+function Area () {
   return (
     <div>Area</div>
   )
