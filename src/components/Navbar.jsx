@@ -61,28 +61,33 @@ function Navbar () {
           setActiveMenu((prevActiveMenu) =>
             !prevActiveMenu
           )}
-        color='gray'
-        icon={<AiOutlineMenu />}
+        color={currentColor}
+        icon={
+          <div style={{ fontsize: '18px' }}>
+            <AiOutlineMenu />
+          </div>
+        }
       />
+
       <div className='flex'>
         <NavButton
           title='Cart'
           customFunc={() => handleClick('cart')}
-          color='gray'
+          color={currentColor}
           icon={<FiShoppingCart />}
         />
         <NavButton
           title='Chat'
           dotColor='#03C1D7'
           customFunc={() => handleClick('chat')}
-          color='gray'
+          color={currentColor}
           icon={<BsChatLeft />}
         />
         <NavButton
           title='Notification'
           dotColor='#03C1D7'
           customFunc={() => handleClick('notification')}
-          color='gray'
+          color={currentColor}
           icon={<RiNotification3Line />}
         />
         <TooltipComponent
